@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b0d0b">
+  <title>Sayt buyurtma qilish | Ibrohim.dev</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="order-page">
+  <div class="glow"></div>
+  <header>
+    <a class="logo" href="index.html"><b>IF</b> IBROHIM<span>.DEV</span></a>
+    <nav id="mainNav">
+      <a href="index.html#about" data-uz="Men haqimda" data-ru="Обо мне" data-en="About">Men haqimda</a>
+      <a href="index.html#projects" data-uz="Loyihalar" data-ru="Проекты" data-en="Projects">Loyihalar</a>
+      <a href="index.html#skills" data-uz="Ko‘nikmalar" data-ru="Навыки" data-en="Skills">Ko‘nikmalar</a>
+      <a href="index.html#contact" data-uz="Aloqa" data-ru="Контакты" data-en="Contact">Aloqa</a>
+      <!-- <a class="order-nav" href="admin.html" data-uz="Admin panel ↗" data-ru="Админ-панель ↗" data-en="Admin panel ↗">Admin panel ↗</a> -->
+      <a class="order-nav" href="order.html" data-uz="Buyurtma berish ↗" data-ru="Заказать сайт ↗" data-en="Order a website ↗">Buyurtma berish ↗</a>
+    </nav>
+    <div class="tools"><button id="theme" type="button" aria-label="Change theme">☼</button><button id="language" type="button">UZ</button></div>
+    <button id="menu" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main class="order-main">
+    <section class="order-intro reveal visible">
+      <a class="back-link" href="index.html">← <span data-uz="Portfolio'ga qaytish" data-ru="Вернуться в портфолио" data-en="Back to portfolio">Portfolio'ga qaytish</span></a>
+      <p class="mono">PROJECT REQUEST / 2026</p>
+      <h1 data-uz="Keling, sizning<br><i>saytingizni</i> yaratamiz." data-ru="Давайте создадим<br><i>ваш сайт.</i>" data-en="Let's build<br><i>your website.</i>">Keling, sizning<br><i>saytingizni</i> yaratamiz.</h1>
+      <p class="order-lead" data-uz="Loyiha haqida qisqacha yozing. Arizangiz Telegram orqali menga yuboriladi va men siz bilan bog‘lanaman." data-ru="Расскажите немного о проекте. Заявка придёт мне в Telegram, и я свяжусь с вами." data-en="Tell me a little about your project. Your request will be sent to my Telegram, and I'll get in touch.">Loyiha haqida qisqacha yozing. Arizangiz Telegram orqali menga yuboriladi va men siz bilan bog‘lanaman.</p>
+      <div class="order-points"><span>✳ <b>Responsive design</b></span><span>✳ <b>Modern interface</b></span><span>✳ <b>Personal approach</b></span></div>
+    </section>
+
+    <section class="order-form-wrap reveal visible">
+      <div class="form-heading"><div><small>01 / PROJECT DETAILS</small><h2 data-uz="Buyurtma formasi" data-ru="Форма заказа" data-en="Order form">Buyurtma formasi</h2></div><span class="secure-mark">● PRIVATE REQUEST</span></div>
+      <form id="orderForm" class="order-form">
+        <div class="form-grid">
+          <label><span data-uz="Ismingiz *" data-ru="Ваше имя *" data-en="Your name *">Ismingiz *</span><input name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Ibrohim" data-uz-placeholder="Ismingizni kiriting" data-ru-placeholder="Введите имя" data-en-placeholder="Enter your name"></label>
+          <label><span data-uz="Telefon raqamingiz *" data-ru="Ваш номер телефона *" data-en="Your phone number *">Telefon raqamingiz *</span><input name="phone" type="tel" required minlength="7" maxlength="25" autocomplete="tel" placeholder="+998 90 123 45 67" data-uz-placeholder="+998 90 123 45 67" data-ru-placeholder="+998 90 123 45 67" data-en-placeholder="+998 90 123 45 67"></label>
+          <label><span data-uz="Telegram username *" data-ru="Telegram username *" data-en="Telegram username *">Telegram username *</span><input name="telegram" required maxlength="80" placeholder="@username" data-uz-placeholder="@username" data-ru-placeholder="@username" data-en-placeholder="@username"></label>
+          <label><span data-uz="Qanday sayt kerak? *" data-ru="Какой сайт нужен? *" data-en="What kind of website? *">Qanday sayt kerak? *</span><select name="type" required><option value="" data-uz="Turini tanlang" data-ru="Выберите тип" data-en="Choose a type">Turini tanlang</option><option value="Landing page">Landing page</option><option value="Business website">Business website</option><option value="Online store">Online store</option><option value="Portfolio">Portfolio</option><option value="Web application">Web application</option><option value="Other">Other / Boshqa</option></select></label>
+          <label><span data-uz="Taxminiy budjet" data-ru="Примерный бюджет" data-en="Estimated budget">Taxminiy budjet</span><select name="budget"><option value="Kelishiladi">Kelishiladi / Договоримся</option><option value="1–2 mln UZS">1–2 mln UZS</option><option value="2–5 mln UZS">2–5 mln UZS</option><option value="5–10 mln UZS">5–10 mln UZS</option><option value="10 mln+ UZS">10 mln+ UZS</option></select></label>
+          <label class="full-field"><span data-uz="Loyiha haqida batafsil *" data-ru="Расскажите о проекте *" data-en="Tell me about the project *">Loyiha haqida batafsil *</span><textarea name="description" required minlength="15" maxlength="1800" rows="5" placeholder="Sayt qanday bo‘lishi kerak? Qanday funksiyalar kerak?" data-uz-placeholder="Sayt qanday bo‘lishi kerak? Qanday funksiyalar kerak?" data-ru-placeholder="Каким должен быть сайт? Какие функции нужны?" data-en-placeholder="What should the website look like? What features do you need?"></textarea><small class="field-hint" data-uz="Kamida 15 ta belgi" data-ru="Минимум 15 символов" data-en="At least 15 characters">Kamida 15 ta belgi</small></label>
+        </div>
+        <label class="trap" aria-hidden="true">Do not fill this field<input name="company_website" tabindex="-1" autocomplete="off"></label>
+        <button class="primary submit-order" type="submit"><span data-uz="Buyurtmani yuborish" data-ru="Отправить заявку" data-en="Send request">Buyurtmani yuborish</span> <b>↗</b></button>
+        <p id="orderResult" class="order-result" role="status" aria-live="polite" data-uz="Ma’lumotlaringiz faqat buyurtmangizga javob berish uchun ishlatiladi." data-ru="Ваши данные используются только для ответа на заявку." data-en="Your details are used only to respond to your request.">Ma’lumotlaringiz faqat buyurtmangizga javob berish uchun ishlatiladi.</p>
+      </form>
+    </section>
+  </main>
+  <footer><a class="logo" href="index.html"><b>IF</b> IBROHIM.DEV</a><span>© 2026 — Made with care.</span><a href="index.html">PORTFOLIO ↗</a></footer>
+  <script>
+  const orderForm=document.querySelector('#orderForm');
+  orderForm?.addEventListener('submit',async event=>{
+    event.preventDefault();
+    const button=orderForm.querySelector('[type="submit"]');
+    const result=document.querySelector('#orderResult');
+    button.disabled=true; result.textContent='Yuborilmoqda… / Отправляем…';
+    try{
+      const payload=Object.fromEntries(new FormData(orderForm).entries());
+      const response=await fetch('/api/order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+      const data=await response.json();
+      if(!response.ok) throw new Error(data.message||'Не удалось отправить заявку');
+      result.textContent='✅ Заявка отправлена! Спасибо. / Buyurtma yuborildi!';
+      orderForm.reset();
+    }catch(error){result.textContent='❌ '+error.message+' / Server sozlamalarini tekshiring.';}
+    finally{button.disabled=false;}
+  });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
