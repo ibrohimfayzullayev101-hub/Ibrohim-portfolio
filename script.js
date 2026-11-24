@@ -130,21 +130,19 @@ if (preloader) {
   window.setTimeout(() => { pageLoaded = true; renderProgress(100); }, 4200);
 }
 
-// Premium interaction layer: custom cursor, subtle 3D tilt, and restrained glitch.
+// Premium interaction layer: subtle 3D tilt and restrained glitch.
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const finePointer = window.matchMedia('(pointer: fine)').matches;
   const heroVisual = document.querySelector('.visual');
   const idCard = document.querySelector('.idcard');
   document.body.classList.add('glitch-ready');
-  if (!reduceMotion && finePointer) {
-    document.body.classList.add('cyber-cursor');
-    const core = document.createElement('div'); core.className = 'cursor-core'; core.setAttribute('aria-hidden','true');
-    const ring = document.createElement('div'); ring.className = 'cursor-ring'; ring.setAttribute('aria-hidden','true');
-    document.body.append(core, ring);
-    window.addEventListener('pointermove', e => { core.style.left = `${e.clientX}px`;core.style.top = `${e.clientY}px`;ring.style.left = `${e.clientX}px`;ring.style.top = `${e.clientY}px`;core.classList.add('active');ring.classList.add('active'); }, {passive:true});
-    document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('pointerenter',()=>ring.classList.add('hovering'));el.addEventListener('pointerleave',()=>ring.classList.remove('hovering'));});
-    if(heroVisual && idCard){heroVisual.addEventListener('pointermove',e=>{const r=heroVisual.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;idCard.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*8}deg) translateZ(5px)`;});heroVisual.addEventListener('pointerleave',()=>idCard.style.transform='');}
+  if (!reduceMotion && heroVisual && idCard) {
+    heroVisual.addEventListener('pointermove', e => {
+      const r = heroVisual.getBoundingClientRect();
+      const x = (e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+      idCard.style.transform=`perspective(900px) rotateY(${x*9}deg) rotateX(${-y*8}deg) translateZ(5px)`;
+    });
+    heroVisual.addEventListener('pointerleave',()=>idCard.style.transform='');
   }
 })();
 
